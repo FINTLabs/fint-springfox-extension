@@ -17,13 +17,14 @@ compile('no.fint:fint-springfox-extension:0.0.1')
 
 ## Usage
 
-Add `ApiDocsController` in a `@Configuration` class.
+Add `@EnableSpringfoxExtension` in the main Application-class.
 
 ```java
-@ComponentScan(basePackageClasses = ApiDocsController.class)
-@Configuration
-public class Config {
-    ...
+@EnableSpringfoxExtension
+public class Application {
+   public static void main(String[] args) {
+       SpringApplication.run(Application.class, args);
+   } 
 }
 ```
 
