@@ -1,6 +1,7 @@
 # FINT springfox extension
 
 [![Build Status](https://travis-ci.org/FINTlibs/fint-springfox-extension.svg?branch=master)](https://travis-ci.org/FINTlibs/fint-springfox-extension)
+[![Coverage Status](https://coveralls.io/repos/github/FINTlibs/fint-springfox-extension/badge.svg?branch=master)](https://coveralls.io/github/FINTlibs/fint-springfox-extension?branch=master)
 
 ## Installation
 
