@@ -1,24 +1,10 @@
-buildscript {
-    apply from: 'https://raw.githubusercontent.com/FINTprosjektet/fint-buildscripts/v1.0.12/dependencies.gradle'
-    ext {
-        springBootVersion = springBootVersion
-    }
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-    }
-}
-
 plugins {
-    id 'com.github.ben-manes.versions' version '0.14.0'
+    id 'com.jfrog.bintray' version '1.7.3'
     id 'com.github.kt3k.coveralls' version '2.8.1'
 }
 
 apply plugin: 'java'
 apply plugin: 'groovy'
-apply plugin: 'org.springframework.boot'
 apply plugin: 'maven'
 apply plugin: 'jacoco'
 
@@ -33,18 +19,19 @@ repositories {
     mavenLocal()
 }
 
-
+apply from: 'https://raw.githubusercontent.com/FINTprosjektet/fint-buildscripts/v1.0.12/dependencies.gradle'
 dependencies {
     compile("com.github.springfox.loader:springfox-loader:${springfoxLoaderVersion}")
+    compile("org.projectlombok:lombok:${lombokVersion}")
     compile('com.jayway.jsonpath:json-path:2.2.0')
     compile('org.reflections:reflections:0.9.11')
 
-    compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.springframework.boot:spring-boot-starter')
+    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter:${springBootVersion}")
 
     testCompile("org.spockframework:spock-spring:${spockSpringVersion}")
     testCompile("org.spockframework:spock-core:${spockSpringVersion}")
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
 }
 
 task wrapper(type: Wrapper) {
@@ -55,4 +42,8 @@ jacocoTestReport {
     reports {
         xml.enabled true
     }
+}
+
+if (project.hasProperty('bintrayUser') && project.hasProperty('bintrayKey')) {
+    apply from: 'https://raw.githubusercontent.com/FINTprosjektet/fint-buildscripts/v1.0.12/bintray.gradle'
 }
