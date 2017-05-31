@@ -1,5 +1,7 @@
 # FINT springfox extension
 
+[![Build Status](https://travis-ci.org/FINTlibs/fint-springfox-extension.svg?branch=master)](https://travis-ci.org/FINTlibs/fint-springfox-extension)
+
 ## Installation
 
 ## Usage
