@@ -37,7 +37,7 @@ public class ApiDocsController {
     @Value("${fint.springfox.swagger-https:true}")
     private String swaggerUrlHttps;
 
-    @Value("${fint.springfox.swagger-apidocs-path:/v2/apidocs}")
+    @Value("${fint.springfox.swagger-apidocs-path:/v2/api-docs}")
     private String swaggerApiDocsPath;
 
     private RestTemplate restTemplate = new RestTemplate();
