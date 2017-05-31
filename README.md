@@ -12,7 +12,7 @@ repositories {
     }
 }
 
-compile('no.fint:fint-sse:0.0.1')
+compile('no.fint:fint-springfox-extension:0.0.1')
 ```
 
 ## Usage
