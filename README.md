@@ -1,4 +1,4 @@
-# FINT sprinfox extension
+# FINT springfox extension
 
 ## Installation
 
@@ -13,3 +13,7 @@ public class Config {
     ...
 }
 ```
+
+The ApiDocsController is available on: `/fint-springfox/api-docs`  
+Response contains:
+- externalDocs, value from `@SwaggerDefinition`
