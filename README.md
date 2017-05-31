@@ -7,7 +7,7 @@
 Add `ApiDocsController` in a `@Configuration` class.
 
 ```java
-@ComponentScan()
+@ComponentScan(basePackageClasses = ApiDocsController.class)
 @Configuration
 public class Config {
     ...
@@ -15,5 +15,5 @@ public class Config {
 ```
 
 The ApiDocsController is available on: `/fint-springfox/api-docs`  
-Response contains:
-- externalDocs, value from `@SwaggerDefinition`
+The response will include:
+- _externalDocs_, value from `@SwaggerDefinition`
