@@ -9,7 +9,7 @@ apply plugin: 'maven'
 apply plugin: 'jacoco'
 
 jar {
-    version = '0.0.1-SNAPSHOT'
+    version = '0.0.1'
     baseName = 'fint-springfox-extension'
 }
 sourceCompatibility = 1.8
