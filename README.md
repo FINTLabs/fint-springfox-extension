@@ -5,6 +5,16 @@
 
 ## Installation
 
+```groovy
+repositories {
+    maven {
+        url  "http://dl.bintray.com/fint/maven" 
+    }
+}
+
+compile('no.fint:fint-sse:0.0.1')
+```
+
 ## Usage
 
 Add `ApiDocsController` in a `@Configuration` class.
