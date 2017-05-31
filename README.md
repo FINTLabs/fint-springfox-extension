@@ -38,4 +38,4 @@ The response will include:
 |-----|---------------|-------------|
 | fint.springfox.base-package | Base package where the controller will search for `@SwaggerDefinition`. | no.fint |
 | fint.springfox.swagger-https | Use https in the request to swagger api-docs. | true |
-| fint.springfox.swagger-apidocs-path | Path the the swagger api-docs | /v2/apidocs |
+| fint.springfox.swagger-apidocs-path | Path the the swagger api-docs | /v2/api-docs |
