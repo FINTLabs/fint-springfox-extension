@@ -21,6 +21,7 @@ Add `@EnableSpringfoxExtension` in the main Application-class.
 
 ```java
 @EnableSpringfoxExtension
+@SpringBootApplication
 public class Application {
    public static void main(String[] args) {
        SpringApplication.run(Application.class, args);
